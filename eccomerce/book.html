@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecommerce website</title>
+    <link rel="stylesheet" href="index.css" />
+    <script
+      src="https://kit.fontawesome.com/0e53af926d.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PX2SFRXRR5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PX2SFRXRR5');
+</script>
+  </head>
+  <body>
+    <!--header section-->
+
+<header>
+  <div id="header">
+    <div class="header-logo">
+      <a href="index.html"><img src="images/logo.png" alt="" class="logo" /></a>
+    </div>
+    <div class="header-list">
+      <nav class="header-list-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a class="active" href="book.html">Hire Chef</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header-list-icon">
+      <a href="https://wa.me/+254718533655">
+        <i class="fab fa-whatsapp fa-lg shake-icon"></i>
+      </a>
+    </div>
+  </div>
+</header>
+
+<script type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+emailjs.init("WzBwOD50LEXbxezAP");
+})();
+</script>
+
+  <main>
+    <section id="shoppy1">
+      <section id="chef">
+        <img src="images/chef.png" alt="chef">
+      </section>
+
+      <section id="chef-right">
+        <div class="form-blog">
+          <label for="event-name">Event Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="eventName"
+            placeholder=" type of event "
+            required
+          />
+        </div>        
+        <div class="form-blog">
+          <label for="days">Number of days/hours</label>
+          <input
+            type="text"
+            class="form-control"
+            id="days"
+            placeholder=" eg. 1 day "
+            pattern="\d+(\s+\w+)?"
+            title="Please enter a valid number of days or hours"
+          />
+        </div>        
+        <div class="form-blog">
+          <label for="requirements">Requirements</label>
+          <input
+            type="text"
+            class="form-control"
+            id="requirements"
+            placeholder=" optional "
+            pattern="[a-zA-Z0-9\s]+"
+            title="Please enter alphanumeric characters only"
+          />
+        </div>
+        <div class="form-blog">
+          <label for="phone">Phone Number</label>
+          <input
+            type="tel"
+            class="form-control"
+            id="phone"
+            placeholder="Phone number"
+            pattern="[0-9]{10,14}"
+            title="Please enter a valid phone number (10-14 digits)"
+            required
+          />
+        </div>        
+        </div>
+        <div class="form-blog">
+          <label for="message">Message</label>
+          <textarea class="form-control" id="message" rows="3"></textarea>
+        </div>
+        <button class="btn3" onclick="sendOrder()">Hire Now</button>
+       
+      </section>
+        
+        
+        
+    </section>
+  </main>
+
+    <footer>
+      <div id="footer">
+        <div class="contact">
+          <a href="index.html"><img src="images/logo.png" alt="" class="logo" /></a>
+          <br> <br>
+          <br> 
+          <h3>Contact</h3>
+          <address>
+            <p><b>Address:</b> Ngara Road -00600</p>
+            <p><b>Phone:</b> 0718533655 </p>
+            <p><b>Hours</b> 07:00 - 18:00. Mon - Sat</p>
+          </address>
+          <h3>Follow Us</h3>
+          <br> 
+          <div class="socials">
+            <a href="https://www.facebook.com/GGHouseholds"><i class="fa-brands fa-facebook-square"></i></a>
+            <a href="https://www.youtube.com/@GGHouseholdsVideos"><i class="fa-brands fa-youtube"></i></a>
+            <a href="https://telegram.me/+254718533655"><i class="fa-brands fa-telegram"></i></a>
+            <a href="https://www.instagram.com/GG-Households"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://www.twitter.com/GG-Households"><i class="fa-brands fa-twitter"></i></a>
+          </div>
+        </div>
+        <div class="about">
+          <h3>About</h3>
+          <br> 
+          <a href="about.html">About Us</a>
+          <a href="#" onclick="displayDeliveryMessage()">Delivery Information</a>
+          <a href="#" onclick="displayPrivacyPolicy()">Privacy Policy</a>
+          <a href="#" onclick="displayTermsAndConditions()">Terms and Conditions</a>
+          <a href="contact.html">Contact Us</a>
+        </div>
+        <div class="myaccount ">
+          <h3>More</h3>
+          <br> 
+          <a href="book.html">Hire a Chef</a>
+          <a href="shop.html">Shop</a>
+          <a href="#" onclick="displayPayment()">Payment</a>
+          <a href="#">Track My Order</a>
+          <a href="tel:0718533655">Help</a>
+        </div>
+      </div>
+      <nav class="footer1">©2023 GG-Households. All rights reserved.</nav>
+    </footer>
+    <script src="index.js"></script>
+  </body>
+</html>

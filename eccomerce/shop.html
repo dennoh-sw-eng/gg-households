@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ecommerce website</title>
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous"
+  />
+
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init("ispVv3fvOmKoFT2Vw");
+   })();
+</script>
+
+    <link rel="stylesheet" href="index.css" />
+    <script
+      src="https://kit.fontawesome.com/0e53af926d.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-PX2SFRXRR5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-PX2SFRXRR5');
+</script>
+  </head>
+  
+  <body>
+    <!--header section-->
+
+<header>
+  <div id="header">
+    <div class="header-logo">
+      <a href="index.html"><img src="images/logo.png" alt="" class="logo" /></a>
+    </div>
+    <div class="header-list">
+      <nav class="header-list-nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a class="active" href="shop.html">Shop</a></li>
+          <li><a href="book.html">Hire Chef</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="header-list-icon">
+      <a href="https://wa.me/+254718533655">
+        <i class="fab fa-whatsapp fa-lg shake-icon"></i>
+      </a>
+    </div>
+  </div>
+</header>
+
+  <main>
+    <section id="shoppy">
+
+      <body>
+        <div class="container border mt-3 bg-light">
+          <div class="row">
+            <div class="col-md-5 p-5 custom-bg-lightblue text-white">
+              <h3>Almost there!</h3>
+              <h4>
+                Send your details and we will deliver right at your door step.
+              </h4>
+              <img src="images/b5.png" alt="image">
+            </div>
+            <div class="col-md-6 border-left py-3">
+              <h3>Details form</h3>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="name"
+                  placeholder="Your name"
+                  pattern="[a-zA-Z\s]+"
+                  title="Please enter a valid name"
+                  required
+                />
+              </div>                           
+              <div class="form-group">
+                <h5 for="email">Phone Number</h5>
+                <input
+                  type="tel"
+                  class="form-control"
+                  id="email"
+                  placeholder="Your Phone Number"
+                  pattern="[0-9]{10,14}"
+                  title="Please enter a valid phone number (10-14 digits)" required
+                />
+              </div>
+              <div class="form-group">
+                <h5 for="items">Items & Quantity</h5>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="items"
+                  placeholder="Item One (3), Item Two (6), .."
+                />
+              </div>
+              <div class="form-group">
+                <h5 for="location">Delivery Address</h5>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="location"
+                  placeholder="(Town), (Lane), (Building), (House No)"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <h5 for="message">Message</h5>
+                <textarea class="form-control" id="message" rows="3"></textarea>
+              </div>
+              <button class="btn btn-primary" onclick="sendMail()">Submit</button>
+            </div>
+          </div>
+        </div>
+      </body>
+
+    </section>
+  </main>
+
+  <footer>
+    <div id="footer">
+      <div class="contact">
+        <a href="index.html"><img src="images/logo.png" alt="" class="logo" /></a>
+        <br> <br>
+        <br> 
+        <h3>Contact</h3>
+        <address>
+          <p><b>Address:</b> Ngara Road -00600</p>
+          <p><b>Phone:</b> 0718533655 </p>
+          <p><b>Hours</b> 07:00 - 18:00. Mon - Sat</p>
+        </address>
+        <h3>Follow Us</h3>
+        <br> 
+        <div class="socials">
+          <a href="https://www.facebook.com/GGHouseholds"><i class="fa-brands fa-facebook-square"></i></a>
+          <a href="https://www.youtube.com/@GGHouseholdsVideos"><i class="fa-brands fa-youtube"></i></a>
+          <a href="https://telegram.me/+254718533655"><i class="fa-brands fa-telegram"></i></a>
+          <a href="https://www.instagram.com/GG-Households"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://www.twitter.com/GG-Households"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+      <div class="about">
+        <h3>About</h3>
+        <br> 
+        <a href="about.html">About Us</a>
+        <a href="#" onclick="displayDeliveryMessage()">Delivery Information</a>
+        <a href="#" onclick="displayPrivacyPolicy()">Privacy Policy</a>
+        <a href="#" onclick="displayTermsAndConditions()">Terms and Conditions</a>
+        <a href="contact.html">Contact Us</a>
+      </div>
+      <div class="myaccount ">
+        <h3>More</h3>
+        <br> 
+        <a href="book.html">Hire a Chef</a>
+        <a href="shop.html">Shop</a>
+        <a href="#" onclick="displayPayment()">Payment</a>
+        <a href="#" onclick="trackOrder()">Track My Order</a>
+        <a href="tel:0718533655">Help</a>
+      </div>
+    </div>
+    <nav class="footer1">©2023 GG-Households. All rights reserved.</nav>
+  </footer>
+    <script src="index.js"></script>
+  </body>
+</html>
